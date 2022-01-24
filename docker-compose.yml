@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:  
+  layer-cake:
+    build:
+      context: ./
+      target: production-build-stage
+      dockerfile: Dockerfile
+    container_name: layer-cake
+    restart: 'always'
+    command: bash -c "yarn && yarn build && yarn ts-node ./src/index.ts"    
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
