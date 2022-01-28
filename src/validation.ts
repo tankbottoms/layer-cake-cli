@@ -18,7 +18,6 @@ export function validate_all_assets_for_ipfs(assets: Asset[]) {
 
 export function validate_asset_for_ipfs(asset: Asset): boolean {
   let valid = true;
-
   const paths = [`${asset.image_folder}/original/${asset.base_name}.png`];
   for (const output of the_project.config.image_outputs) {
     paths.push(`${the_project.output_folder}/${asset.image_hash}/${output.tag}/${asset.base_name}.png`);

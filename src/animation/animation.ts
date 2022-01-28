@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import fs from 'fs';
 import sharp from 'sharp';
 import ffmpeg from 'fluent-ffmpeg';
 import { Asset } from '../asset';
@@ -12,11 +12,13 @@ type AnimationName = 'confetti' | 'rain' | 'smoke';
 export abstract class Animation {
   protected time = 0;
   constructor(public width: number, public height: number) {}
+
   public reset(width: number, height: number) {
     this.time = 0;
     this.width = width;
     this.height = height;
   }
+
   public async get_frame(delta_time: number, frame: number): Promise<string> {
     return '';
   }
@@ -65,6 +67,7 @@ export class RainAnimation extends Animation {
       const h = Math.floor(raindrop.height * particle.scaleFactor);
       await ctx.drawImage(raindrop, particle.x, particle.y, w, h);
     }
+
     try {
       const buffer = canvas.toBuffer('image/png');
       fs.writeFileSync(filename, buffer);
@@ -82,6 +85,7 @@ export class RainAnimation extends Animation {
 export async function resize_background_to_cache(path: string, output: AnimOutput) {
   const { width, height } = output;
   const output_path = `./layered-assets/animation-cache/background.png`;
+
   try {
     await sharp(path).sharpen().png({ quality: 90 }).resize(width, height).toFile(output_path);
   } catch (err) {
@@ -132,12 +136,10 @@ export async function composite_subject_images_to_cache(asset: Asset, output: An
 
 export function get_animation(tag: string, width: number, height: number) {
   switch (tag) {
-    /*
-    case 'smoke':
-      return smokeAnimation;
-    case 'confetti':
-      return confettiAnimation;
-    */
+    // case 'smoke':
+    //   return smokeAnimation;
+    // case 'confetti':
+    //   return confettiAnimation;
     case 'rain':
       return new RainAnimation(width, height, `./layered-assets/animation-cache`);
     default:
@@ -274,25 +276,29 @@ export async function combine_icon_gif(assets: Asset[], output: StackedGifOutput
   for (const asset of assets) {
     const source_path = `${asset.image_folder}/${profile_output.tag}/${asset.base_name}${profile_output.ipfs_tag}.png`
     const dest_path = `${cache_folder}/${zero_pad(cache_name++, digits)}.png`;
-    // fs.cpSync(source_path, dest_path);
-    fs.copySync(source_path, dest_path);
+    fs.cpSync(source_path, dest_path);
   }
 
   await delay(1000);
 
   const len = assets[0].base_name.length;
   const glob_path = `${cache_folder}/%0${digits}d.png`;
+
   const output_folder = `${assets[0].image_folder}/${output.tag}`
   if (!fs.existsSync(output_folder)) {
     fs.mkdirSync(output_folder);
   }
   const gif_path = `${output_folder}/${assets[0].base_name}.gif`;  
+
   await call_save_gif(glob_path, gif_path);
+
 }
 
 async function call_save_gif(glob_path:string, output_path:string) {
   let done = false;
+
   logger.debug(`creating gif from glob ${glob_path} and output ${output_path}`)
+
   const result = ffmpeg(glob_path)  
     .loop(10)  
     .fps(3)
@@ -306,12 +312,13 @@ async function call_save_gif(glob_path:string, output_path:string) {
         throw err;
     })    
     .save(output_path);
-};
+}
 
 export async function combine_video(asset: Asset, output: AnimOutput) {
   const { image_folder, image_hash: fingerprint_hash } = asset;
   const path = `${asset.image_folder}/${asset.image_hash}-${output.tag}.m4v`;
   logger.debug(`${asset.image_hash}-${output.tag}.m4v`);
+
   try {
     const input_pattern = `${image_folder}/${fingerprint_hash}-${output.tag}-%03d.png`;
     await call_save_video(input_pattern, path);
@@ -330,4 +337,4 @@ function nuke_folder_contents(folder: string, nuke_folders: boolean = false) {
       fs.rmSync(`${folder}/${entry.name}`)
     }
   }
-};
+}

@@ -123,6 +123,7 @@ async function get_all_assets(
     the_project.total_populations_size += population.config.population_size;
   }
   logger.info(`total configured meta-population size is ${the_project.total_populations_size}`);
+  
   await delay(3000);
 
   let shuffled_ordering;
