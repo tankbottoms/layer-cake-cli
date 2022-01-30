@@ -34,17 +34,17 @@ export const bayc_description: string =
 `
 Introducing…
 
-The Bored Ape Yacht Club, No. 1420 or referred to as The One, Four-twenty (derivative) Movement DAO Genesis utility-NFT Collection, comprising of 4,444 uniquely composited primate.
+The Bored Ape Yacht Club, No. 1420 or colloquially referred to as Four-twenty presents yet another BAYC derivative NFT Collection, as the Movement DAO Genesis Seed Community Collection.  Comprising of 4,444 psychedelic, questionally posed, images of Four-Twenty.
 
-Four-twenty received a Message so powerful; it literally blew his eyes out.  Fully under the psychedelic influences of couch rescued blotter-paper, industrial ether, and questionable browned mushrooms - which were all consumed without question.  
+After ingesting copious amounts ergos fungus, kykeon, Artemisia absinthium, peyote, datura, morning glory, Salvia divinorum, pituri, couch rescued blotter-paper, industrial ether, and questionable browned mushrooms. There was no question, Four-twenty was recieving Messages - it literally blew his eyes out.
 
-Four-twenty forgot how fully opposite-Michelin-star eating mushrooms were, almost reflexive, despite the subsequent gagging response.  None of this actually mattered, the Message, as if spoken to him by Jane Goodall herself, instructed Four-twenty, to cross space, time, and cartoon boundaries, to the instant reality, to his far-distant progeny and guide them, clearly not in psychedelic trip nutrition, but in coordination.
+This Message, as if spoken to him by Jane Goodall herself, is thought to have instructed Four-twenty, to cross space, time, and cartoon boundaries, and allow himself to be objectified. This objectification's purpose was to incentivize an individual's sense of purpose and community and foster, usher, and guide communities associated with the Movement DAO.
 
-“What is the point of walking upright”, pondered Four-twenty. If communities could easily pool resources, share-ideas, responsibility, oversight, perhaps decentralized governance has a chance. Luckily, Four-twenty was able to capture his thoughts and feelings using the primitive method of photography, while to us images appear to encode an isolated sensory activity. It was only a matter of time until the discovery of chromo-luminescent-micro-antagonistic encoding by acoustic variances, or audio encoding in surrounding objects given several tens of millions of factors in camera resolution. 
+Four-Twenty's likeness molested with titalating unnecessary nipple highlights, as currency for purportedly more evolved individuals, was dubious at best, however, so long as the choosen participated in the movement, he would set aside his judgement and allow himself to be objectified.
 
-Four-twenty\’s marginal confidence in our current generation, travelled to this point, when the minimum technical requirement existed to encode, coupled with the preservation of such images on to IPFS and the blockchain Ethereum. The One - Four-twenty’s impossible journey to us captured in all its technicolor glory, will now serves as the utility bestowed upon individuals who have expressed aptitude and passion for decentralized finance, development, coordination while pooling resources and facilitating the community as they vet what issues, movements, and actions are of priority. 
+The Bored Ape Yacht Club Four-twenty Derivative Movement DAO Genesis NFT is a name-drop-keyword-orgy title with a marginal public good purpose mascarading as a mission statement. Together with scores of technicolor primate-porn disseminated over immutable storage Four-twenty resigned his involvement to a long history of similiarly poor choices.  
 
-The Bored Ape Yacht Club Four-twenty derivative Movement DAO Genesis NFT is both a name-drop-keyword-packed title and the Movement community utility token offered to established proven DAO participants and Discord community members alike to bootstrap the governance to manage the Movement DAO’s public endowment and its assets in perpetuity. 
+This cornucopia of psychedelic evidence stands as tribute to those encouraged to participate in sheparding the Movement DAO's community, its governance, by sequentially pushing buttons, usually coupled with some meaningful distance traveled by a machine pointing device. 
 `;
 
 export const baycConfig: ProjectConfig = {
@@ -61,15 +61,15 @@ export const baycConfig: ProjectConfig = {
   rotated_images_allowed: random(100),
   // asset_origin: 0,
   metadata_input: {
-    name: `BAYC-1420`,
-    symbol: 'MOV-1420',
+    name: `BAYC 1420 Movement DAO Community Leader NFTs`,
+    symbol: 'MOVE-1420',
     description: bayc_description,
     birthdate: `${moment(iso_datetime_now).subtract(365 + random(365 * 2), "days").toISOString()}`,
     background_colors: bayc_colors,
     minter: `tankbottoms.eth`,
     creators: [`Movement DAO, <info@move.xyz>`, `Natasha Pankina, <me@natasha-pankina.com>`],
-    publishers: [`@natasha__pankina`, `@movedotxyz`],
-    genres: [`Bored Ape Yacht Club`, `endowment`, `derivative`, `character`, `profile`, 'movements'],
+    publishers: [`@movedotxyz`, `@natasha__pankina`],
+    genres: [ `Bored Ape Yacht Club`, `endowment`, `derivative`, `character`, `profile`, 'movements' ],
     tags: [`ETH`],
     drop_date: `${iso_datetime_now}`,
     native_size: '2084x2084',
@@ -77,11 +77,11 @@ export const baycConfig: ProjectConfig = {
     include_total_population_in_name: true,
     royalties: {
       artist_address: `0xB772C38aCa8fac0FB50Fd01899ef3Dfa8B7DF628`,
-      artist_percentage: 10,
-      additional_payee: '0xb69EB6EbCB98FfC27FAF84C5734cbc201Dec0153',
+      artist_percentage: 5,
+      additional_payee: '0x46D65c64E883f70371A6fcAcB124FB5dd68c9918',
       additional_payee_percentage: 10,
     },
-    rights: `© 2022 Movement DAO. All rights reserved.`,
+    rights: `© 2022 Movement DAO, BAYC All rights reserved.`,
     decimals: 0,
     generation: 0,
     edition: 0,
@@ -95,20 +95,55 @@ export const baycConfig: ProjectConfig = {
     {
       tag: 'stacked-gif',
       source_image_type: 'profile',
-      max_stacks: 50,
-      images_per_stack: 50
+      max_stacks: 100,
+      images_per_stack: 100
     }
   ],  
   populations: [            
     {
       name: 'bg',
       layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 2222,
+      population_size: 500,
     },        
     {
       name: 't-shirts',
       layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 2222,
+      population_size: 500,
+    },
+    {
+      name: 'bg-eyes',
+      layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
+      population_size: 500,
+    },
+    {
+      name: 't-shirt_eyes',
+      layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
+      population_size: 500,
+    },
+    {
+      name: 'bg_mouth',
+      layer_order: ['Background_color', 'Background_pattern', 'T-shirt',  'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
+      population_size: 250,
+    },
+    {
+      name: 't-shirts_mouth',
+      layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern',  'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
+      population_size: 250,
+    },
+    {
+      name: 'naked',
+      layer_order: ['Background_color', 'Background_pattern', 'Fur', 'Ears', 'Face', 'Eyes', 'Chest',  'Nipples', 'Ape'],
+      population_size: 500,
+    },
+    {
+      name: 'bg_upsidedown',
+      layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Ape'],
+      population_size: 222,
+    },
+    {
+      name: 't-shirts_upsidedown',
+      layer_order: ['Background_color', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Ape'],
+      population_size: 222,
     },
   ],
   anim_outputs: [],

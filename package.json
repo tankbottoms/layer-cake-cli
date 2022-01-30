@@ -21,7 +21,7 @@
   },
   "scripts": {
     "git": "git add . && git-cz",
-    "start": "ts-node ./src/index.ts",
+    "start": "time ts-node ./src/index.ts",
     "build": "rm -rf ./lib && tsc",
     "clean": "rm -rf ./lib && find . -name \".DS_Store\" -delete",
     "clean:all": "rm -rf ./lib ./node_modules",

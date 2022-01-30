@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs-extra';
 import sharp from 'sharp';
 import ffmpeg from 'fluent-ffmpeg';
 import { Asset } from '../asset';
@@ -276,7 +276,8 @@ export async function combine_icon_gif(assets: Asset[], output: StackedGifOutput
   for (const asset of assets) {
     const source_path = `${asset.image_folder}/${profile_output.tag}/${asset.base_name}${profile_output.ipfs_tag}.png`
     const dest_path = `${cache_folder}/${zero_pad(cache_name++, digits)}.png`;
-    fs.cpSync(source_path, dest_path);
+    // fs.cpSync(source_path, dest_path);
+    fs.copySync(source_path, dest_path);
   }
 
   await delay(1000);
