@@ -58,7 +58,7 @@ export const baycConfig: ProjectConfig = {
   metadata_outputs: ['ethereum'],
   metadata_file_extension: false,
   hide_rarity_names: true,
-  rotated_images_allowed: random(100),
+  rotated_images_allowed: random(20),
   // asset_origin: 0,
   metadata_input: {
     name: `BAYC 1420 Movement DAO Community Leader NFTs`,
@@ -66,7 +66,7 @@ export const baycConfig: ProjectConfig = {
     description: bayc_description,
     birthdate: `${moment(iso_datetime_now).subtract(365 + random(365 * 2), "days").toISOString()}`,
     background_colors: bayc_colors,
-    minter: `tankbottoms.eth`,
+    minter: `@tankbottoms_xyz, tankbottoms.eth`,
     creators: [`Movement DAO, <info@move.xyz>`, `Natasha Pankina, <me@natasha-pankina.com>`],
     publishers: [`@movedotxyz`, `@natasha__pankina`],
     genres: [ `Bored Ape Yacht Club`, `endowment`, `derivative`, `character`, `profile`, 'movements' ],
@@ -96,55 +96,138 @@ export const baycConfig: ProjectConfig = {
       tag: 'stacked-gif',
       source_image_type: 'profile',
       max_stacks: 100,
-      images_per_stack: 100
+      images_per_stack: 250
     }
   ],  
-  populations: [            
+  populations: [                
+    {
+      name: 'naked',
+      layer_order: [
+        'Background_color', 
+        'Background_pattern', 
+        'Fur', 
+        'Ears', 
+        'Face',         
+        'Chest',  
+        'Nipples', 
+        'Ape'
+        ],
+      population_size: 944,
+    },
     {
       name: 'bg',
-      layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 500,
+      layer_order: [
+        'Background_color', 
+        'Background_pattern', 
+        'T-shirt', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Ape'
+        ],
+      population_size: 750,
     },        
     {
       name: 't-shirts',
-      layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 500,
+      layer_order: [
+        'Background', 
+        'T-shirt_color', 
+        'T-shirt_pattern', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Ape'
+        ],
+      population_size: 1250,
     },
     {
-      name: 'bg-eyes',
-      layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
+      name: 'bg_eyes',
+      layer_order: [
+        'Background_color', 
+        'Background_pattern', 
+        'T-shirt', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Eyes', 
+        'Ape'
+        ],
       population_size: 500,
-    },
-    {
-      name: 't-shirt_eyes',
-      layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
-      population_size: 500,
-    },
+    },    
     {
       name: 'bg_mouth',
-      layer_order: ['Background_color', 'Background_pattern', 'T-shirt',  'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
-      population_size: 250,
-    },
-    {
-      name: 't-shirts_mouth',
-      layer_order: ['Background', 'T-shirt_color', 'T-shirt_pattern',  'Fur', 'Ears', 'Face', 'Eyes', 'Ape'],
-      population_size: 250,
-    },
-    {
-      name: 'naked',
-      layer_order: ['Background_color', 'Background_pattern', 'Fur', 'Ears', 'Face', 'Eyes', 'Chest',  'Nipples', 'Ape'],
+      layer_order: [
+        'Background_color', 
+        'Background_pattern', 
+        'T-shirt',  
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Eyes', 
+        'Ape'
+        ],
       population_size: 500,
     },
+    /*
+    {
+      name: 't-shirt_eyes',
+      layer_order: [
+        'Background', 
+        'T-shirt_color', 
+        'T-shirt_pattern', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Eyes', 
+        'Ape'
+        ],
+      population_size: 5,
+    },
+    */
+    {
+      name: 't-shirts_mouth',
+      layer_order: [
+        'Background', 
+        'T-shirt_color', 
+        'T-shirt_pattern',  
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Eyes', 
+        'Ape'
+        ],
+      population_size: 500,
+    },
+    /*
     {
       name: 'bg_upsidedown',
-      layer_order: ['Background_color', 'Background_pattern', 'T-shirt', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 222,
+      layer_order: [
+        'Background_color', 
+        'Background_pattern', 
+        'T-shirt', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Ape'
+        ],
+      population_size: 2,
     },
+    */
+    /*
     {
       name: 't-shirts_upsidedown',
-      layer_order: ['Background_color', 'T-shirt_color', 'T-shirt_pattern', 'Fur', 'Ears', 'Face', 'Ape'],
-      population_size: 222,
+      layer_order: [
+        'Background_color', 
+        'T-shirt_color', 
+        'T-shirt_pattern', 
+        'Fur', 
+        'Ears', 
+        'Face', 
+        'Ape'
+        ],
+      population_size: 2,
     },
+    */
   ],
   anim_outputs: [],
   collage_outputs: [    
