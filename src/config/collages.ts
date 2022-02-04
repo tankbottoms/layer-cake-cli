@@ -35,7 +35,19 @@ export const collage4444: CollageOutput = {
   skip_mostly_empty: true,
   shuffle: false,
 };
-  
+
+export const collage1600: CollageOutput = {
+  tag: 'contact-sheet-1600',
+  source_image_type: 'icon',
+  columns: 40,
+  rows: 40,
+  tile_width: 250,
+  tile_height: 250,
+  max_sheets: 5,
+  skip_mostly_empty: false,
+  shuffle: false,
+};
+
 export const collage4000: CollageOutput = {
   tag: 'contact-sheet-4000',
   source_image_type: 'icon',

@@ -5,6 +5,7 @@ import { CollageOutput, ProjectConfig } from '../interfaces';
 import { random } from '../utils';
 import {
   collage11110,
+  collage1600,
   collage4444,
   collage4000,
   collage5000,
@@ -47,8 +48,10 @@ The Bored Ape Yacht Club Four-twenty Derivative Movement DAO Genesis NFT is a na
 This cornucopia of psychedelic evidence stands as tribute to those encouraged to participate in sheparding the Movement DAO's community, its governance, by sequentially pushing buttons, usually coupled with some meaningful distance traveled by a machine pointing device. 
 `;
 
+const population_size = 350;
+
 export const baycConfig: ProjectConfig = {
-  name: `bayc`,
+  name: `bayc-20220204`,
   // stunt_populations_to: 50,
   upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
@@ -58,11 +61,11 @@ export const baycConfig: ProjectConfig = {
   metadata_outputs: ['ethereum'],
   metadata_file_extension: false,
   hide_rarity_names: true,
-  rotated_images_allowed: random(20),
+  rotated_images_allowed: 0, //random(20),
   // asset_origin: 0,
   metadata_input: {
     name: `BAYC 1420 Movement DAO Community Leader NFTs`,
-    symbol: 'MOVE-1420',
+    symbol: 'MOVE-1420-',
     description: bayc_description,
     birthdate: `${moment(iso_datetime_now).subtract(365 + random(365 * 2), "days").toISOString()}`,
     background_colors: bayc_colors,
@@ -81,7 +84,7 @@ export const baycConfig: ProjectConfig = {
       additional_payee: '0x46D65c64E883f70371A6fcAcB124FB5dd68c9918',
       additional_payee_percentage: 10,
     },
-    rights: `© 2022 Movement DAO, BAYC All rights reserved.`,
+    rights: `© 2022 Movement DAO, BAYC All rights are belong to you.`,
     decimals: 0,
     generation: 0,
     edition: 0,
@@ -90,61 +93,34 @@ export const baycConfig: ProjectConfig = {
     { width: 350, height: 350, tag: 'icon', ipfs_tag: 's' }, // feeds into collage, please don't remove.
     { width: 512, height: 512, tag: 'profile', ipfs_tag: '' },
     { width: 1_500, height: 1_500, tag: 'image', ipfs_tag: '' },
-  ],  
+  ],    
   stacked_gif_outputs: [
     {
       tag: 'stacked-gif',
       source_image_type: 'profile',
-      max_stacks: 100,
-      images_per_stack: 250
+      max_stacks: 1,
+      images_per_stack: 10
     }
   ],  
-  populations: [                
-    {
-      name: 'naked',
-      layer_order: [
-        'Background_color', 
-        'Background_pattern', 
-        'Fur', 
-        'Ears', 
-        'Face',         
-        'Chest',  
-        'Nipples', 
-        'Ape'
-        ],
-      population_size: 944,
-    },
+  populations: [                        
     {
       name: 'bg',
       layer_order: [
-        'Background_color', 
-        'Background_pattern', 
+        'Background_Color', 
+        'Background_Pattern', 
         'T-shirt', 
         'Fur', 
         'Ears', 
         'Face', 
         'Ape'
         ],
-      population_size: 750,
+      population_size: population_size,
     },        
-    {
-      name: 't-shirts',
-      layer_order: [
-        'Background', 
-        'T-shirt_color', 
-        'T-shirt_pattern', 
-        'Fur', 
-        'Ears', 
-        'Face', 
-        'Ape'
-        ],
-      population_size: 1250,
-    },
     {
       name: 'bg_eyes',
       layer_order: [
-        'Background_color', 
-        'Background_pattern', 
+        'Background_Color', 
+        'Background_Pattern', 
         'T-shirt', 
         'Fur', 
         'Ears', 
@@ -152,13 +128,13 @@ export const baycConfig: ProjectConfig = {
         'Eyes', 
         'Ape'
         ],
-      population_size: 500,
+      population_size: population_size,
     },    
     {
       name: 'bg_mouth',
       layer_order: [
-        'Background_color', 
-        'Background_pattern', 
+        'Background_Color', 
+        'Background_Pattern', 
         'T-shirt',  
         'Fur', 
         'Ears', 
@@ -166,71 +142,175 @@ export const baycConfig: ProjectConfig = {
         'Eyes', 
         'Ape'
         ],
-      population_size: 500,
-    },
-    /*
+      population_size: population_size,
+    },        
     {
-      name: 't-shirt_eyes',
+      name: 'stolen_t-shirts',
+      layer_order: [
+        'Background',         
+        'Fur', 
+        'Face', 
+        'Ears',
+        'Chest',
+        'Nipples',
+        'Ape',
+        'Medallion'
+        ],
+      population_size: population_size,
+    },    
+    {
+      name: 'stolen_t-shirts_eyes',
+      layer_order: [
+        'Background',         
+        'Fur', 
+        'Face', 
+        'Ears',
+        'Eyes',
+        'Chest',
+        'Nipples',
+        'Ape',
+        'Medallion'        
+        ],
+      population_size: population_size,
+    },    
+    {
+      name: 'stolen_t-shirts_mouth',
+      layer_order: [
+        'Background',         
+        'Fur', 
+        'Face', 
+        'Ears',
+        'Eyes',
+        'Chest',
+        'Nipples',
+        'Ape',
+        'Medallion'        
+        ],
+      population_size: population_size,
+    },
+    {
+      name: 't-shirts',
       layer_order: [
         'Background', 
-        'T-shirt_color', 
-        'T-shirt_pattern', 
         'Fur', 
-        'Ears', 
         'Face', 
-        'Eyes', 
+        'Ears', 
+        'T-shirt_Color', 
+        'T-shirt_Pattern', 
         'Ape'
         ],
-      population_size: 5,
-    },
-    */
+      population_size: population_size,
+    },    
+    {
+      name: 't-shirts_eyes',
+      layer_order: [
+        'Background', 
+        'Fur', 
+        'Face', 
+        'Ears', 
+        'Eyes',
+        'T-shirt_Color', 
+        'T-shirt_Pattern', 
+        'Ape'
+        ],
+      population_size: population_size,
+    },    
     {
       name: 't-shirts_mouth',
       layer_order: [
         'Background', 
-        'T-shirt_color', 
-        'T-shirt_pattern',  
         'Fur', 
+        'Face',
         'Ears', 
-        'Face', 
-        'Eyes', 
+        'Eyes',        
+        'T-shirt_Color', 
+        'T-shirt_Pattern', 
         'Ape'
         ],
-      population_size: 500,
-    },
-    /*
+      population_size: population_size,
+    },    
     {
-      name: 'bg_upsidedown',
+      name: 'tiedye_stolen_t-shirts',
       layer_order: [
-        'Background_color', 
-        'Background_pattern', 
-        'T-shirt', 
+        'Background',         
         'Fur', 
-        'Ears', 
         'Face', 
-        'Ape'
+        'Ears',
+        'Chest',
+        'Nipples',
+        'Ape',        
         ],
-      population_size: 2,
-    },
-    */
-    /*
+      population_size: population_size,
+    },    
     {
-      name: 't-shirts_upsidedown',
+      name: 'tiedye_stolen_t-shirts_eyes',
       layer_order: [
-        'Background_color', 
-        'T-shirt_color', 
-        'T-shirt_pattern', 
+        'Background',         
         'Fur', 
-        'Ears', 
         'Face', 
+        'Ears',
+        'Eyes',
+        'Chest',
+        'Nipples',
+        'Ape',        
+        ],
+      population_size: population_size,
+    },    
+    {
+      name: 'tiedye_stolen_t-shirts_mouth',
+      layer_order: [
+        'Background',         
+        'Fur', 
+        'Face', 
+        'Ears',
+        'Eyes',
+        'Chest',
+        'Nipples',
+        'Ape',        
+        ],
+      population_size: population_size,
+    },
+    {
+      name: 'tiedye_t-shirts',
+      layer_order: [
+        'Background', 
+        'Fur', 
+        'Face', 
+        'Ears', 
+        'T-shirt',         
         'Ape'
         ],
-      population_size: 2,
-    },
-    */
+      population_size: population_size,
+    },        
+    {
+      name: 'tiedye_t-shirts_eyes',
+      layer_order: [
+        'Background', 
+        'Fur', 
+        'Face', 
+        'Ears', 
+        'Eyes',
+        'T-shirt',       
+        'Ape'
+        ],
+      population_size: population_size,
+    },    
+    {
+      name: 'tiedye_t-shirts_mouth',
+      layer_order: [
+        'Background', 
+        'Fur', 
+        'Face', 
+        'Ears', 
+        'T-shirt',         
+        'Ape'
+        ],
+      population_size: population_size,
+    },    
   ],
   anim_outputs: [],
   collage_outputs: [    
+    collage1600,
     collage4444,
     collage4000,  
     collageDiscord600x240,
