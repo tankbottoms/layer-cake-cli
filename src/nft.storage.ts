@@ -10,6 +10,7 @@ import { save_assets_state } from '.';
 import { CIDString } from 'nft.storage/dist/src/lib/interface';
 import { boolean } from 'yargs';
 
+// TODO: experiment with more or less to get stable and faster build
 const MAX_BATCH_ASSETS = 20;
 
 let nft_storage = new NFTStorage({ token: NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1] });
@@ -52,6 +53,8 @@ function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) 
 type CidChecker = (asset: Asset) => boolean;
 type PathSelector = (asset: Asset) => string[];
 type CidDistributor = (asset: Asset, cid: string, thumb_tag: string) => void;
+
+// TODO: dynamic with the number of .env keys avialable, possibly scale
 const WORKERS = 3;
 const storages: NFTStorage[] = [];
 
