@@ -237,11 +237,13 @@ const run = async () => {
   validate_all_assets_for_ipfs(all_assets);
   await compute_asset_hashes(all_assets);
 
-  // if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);  
+  if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);  
+  
   // @ts-ignore
   console.warn(`before metadata`);
   for (const asset of all_assets) await generate_metadata(asset);
   console.warn(`after metadata`);
+  
   // @ts-ignore
   if (the_project?.config?.upload_metadata_to_ipfs) await upload_all_metadata(all_assets);
   console.log('after metadata upload');
@@ -258,8 +260,10 @@ const run = async () => {
   const rarity_path = `${the_project.output_folder}/${the_project.config.name}.rarity.csv`;
   await output_rarity_report_csv(all_assets, all_trait_names, rarity_path);
   output_provenance_hash(all_assets);
+
   // validate_all_assets_for_contract(all_assets);
   // await invoke_contract(all_assets);
+
   logger.warn(`${the_project.config.name} completed`);
 };
 

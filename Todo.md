@@ -44,3 +44,7 @@ export const population_tshirts_naked = [
     },    
 ];
 ```
+
+## Bugs, Todo
+
+* when Tezos is not selected the metadata is still processed should end

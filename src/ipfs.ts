@@ -244,14 +244,14 @@ async () => {
     console.log(data);
     */
     const images_path = `images`;
-    const files = get_directory_filepath_filename(images_path);
+    const files = get_directory_filepath_filename(images_path);    
     /*
     const hash_list = await generate_token_metadata(files);
     // @ts-ignore
     const write_files = await write_to_cache(hash_list);
     true && console.log(hash_list);    
     const ipfsResponse = await add_images_to_ipfs();
-    logger.debug(ipfsResponse);
+    logger.debug(ipfsResponse);    
     */
   } catch (e) {
     if (e instanceof Error) {

@@ -35,28 +35,28 @@ export const bayc_description: string =
 `
 Introducing…
 
-The Bored Ape Yacht Club, No. 1420 or colloquially referred to as Four-twenty presents yet another BAYC derivative NFT Collection, as the Movement DAO Genesis Seed Community Collection.  Comprising of 4,444 psychedelic, questionally posed, images of Four-Twenty.
+The Bored Ape Yacht Club, No. 1420 or colloquially referred to as Four-twenty presente another BAYC derivative NFT Collection, as the Movement DAO Genesis Seed Community Collection.  Comprising of 4,444 psychedelic, questionally posed, images of Four-Twenty.
 
 After ingesting copious amounts ergos fungus, kykeon, Artemisia absinthium, peyote, datura, morning glory, Salvia divinorum, pituri, couch rescued blotter-paper, industrial ether, and questionable browned mushrooms. There was no question, Four-twenty was recieving Messages - it literally blew his eyes out.
 
-This Message, as if spoken to him by Jane Goodall herself, is thought to have instructed Four-twenty, to cross space, time, and cartoon boundaries, and allow himself to be objectified. This objectification's purpose was to incentivize an individual's sense of purpose and community and foster, usher, and guide communities associated with the Movement DAO.
+This Message, as if spoken to him by Jane Goodall herself, instructed Four-twenty, to allow himself to be objectified. This objectification's purpose was to incentivize the Movement DAO leadership to foster, usher, and guide the commuinity within Discord, Twitter, and beyond.
 
-Four-Twenty's likeness molested with titalating unnecessary nipple highlights, as currency for purportedly more evolved individuals, was dubious at best, however, so long as the choosen participated in the movement, he would set aside his judgement and allow himself to be objectified.
+Four-Twenty's likeness molested with titalating unnecessary nipple highlights, as currency for purportedly more evolved individuals, was dubious at best, however, so long as the choosen participated in the Movement DAO via Discord, Twitter and its Snapshot governance, Four Twenty would set aside his judgement and allow himself to be objectified.
 
-The Bored Ape Yacht Club Four-twenty Derivative Movement DAO Genesis NFT is a name-drop-keyword-orgy title with a marginal public good purpose mascarading as a mission statement. Together with scores of technicolor primate-porn disseminated over immutable storage Four-twenty resigned his involvement to a long history of similiarly poor choices.  
+The Bored Ape Yacht Club Four-twenty Derivative Movement DAO Genesis NFT is a name-dropping-keyword-orgy title with a marginal public good purpose mascarading as a DAO mission statement. Together with scores of technicolor primate-porn disseminated over immutable storage Four-twenty resigned his involvement to a long history of similiarly poor choices.  
 
 This cornucopia of psychedelic evidence stands as tribute to those encouraged to participate in sheparding the Movement DAO's community, its governance, by sequentially pushing buttons, usually coupled with some meaningful distance traveled by a machine pointing device. 
 `;
 
-const population_size = 350;
+const population_size = 250;
 
 export const baycConfig: ProjectConfig = {
   name: `bayc-20220204`,
   // stunt_populations_to: 50,
-  upload_images_to_ipfs: false,
+  upload_images_to_ipfs: true,
   upload_metadata_to_ipfs: false,
-  shuffle_assets: true,
-  resume_folder: '',
+  shuffle_assets: false,
+  resume_folder: '', // '20220205-03283885',
   re_generate_collages: false,
   metadata_outputs: ['ethereum'],
   metadata_file_extension: false,
@@ -65,11 +65,11 @@ export const baycConfig: ProjectConfig = {
   // asset_origin: 0,
   metadata_input: {
     name: `BAYC 1420 Movement DAO Community Leader NFTs`,
-    symbol: 'MOVE-1420-',
+    symbol: 'MOVE-',
     description: bayc_description,
     birthdate: `${moment(iso_datetime_now).subtract(365 + random(365 * 2), "days").toISOString()}`,
     background_colors: bayc_colors,
-    minter: `@tankbottoms_xyz, tankbottoms.eth`,
+    minter: `tankbottoms.eth`,
     creators: [`Movement DAO, <info@move.xyz>`, `Natasha Pankina, <me@natasha-pankina.com>`],
     publishers: [`@movedotxyz`, `@natasha__pankina`],
     genres: [ `Bored Ape Yacht Club`, `endowment`, `derivative`, `character`, `profile`, 'movements' ],
@@ -98,8 +98,8 @@ export const baycConfig: ProjectConfig = {
     {
       tag: 'stacked-gif',
       source_image_type: 'profile',
-      max_stacks: 1,
-      images_per_stack: 10
+      max_stacks: 50,
+      images_per_stack: 100
     }
   ],  
   populations: [                        
@@ -199,7 +199,7 @@ export const baycConfig: ProjectConfig = {
         'T-shirt_Pattern', 
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 250 + 100,
     },    
     {
       name: 't-shirts_eyes',
@@ -213,7 +213,7 @@ export const baycConfig: ProjectConfig = {
         'T-shirt_Pattern', 
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 100,
     },    
     {
       name: 't-shirts_mouth',
@@ -227,7 +227,7 @@ export const baycConfig: ProjectConfig = {
         'T-shirt_Pattern', 
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 100,
     },    
     {
       name: 'tiedye_stolen_t-shirts',
@@ -236,11 +236,12 @@ export const baycConfig: ProjectConfig = {
         'Fur', 
         'Face', 
         'Ears',
+        'Eyes',
         'Chest',
         'Nipples',
         'Ape',        
         ],
-      population_size: population_size,
+      population_size: population_size + 10,
     },    
     {
       name: 'tiedye_stolen_t-shirts_eyes',
@@ -254,7 +255,7 @@ export const baycConfig: ProjectConfig = {
         'Nipples',
         'Ape',        
         ],
-      population_size: population_size,
+      population_size: population_size + 10,
     },    
     {
       name: 'tiedye_stolen_t-shirts_mouth',
@@ -268,7 +269,7 @@ export const baycConfig: ProjectConfig = {
         'Nipples',
         'Ape',        
         ],
-      population_size: population_size,
+      population_size: population_size + 10,
     },
     {
       name: 'tiedye_t-shirts',
@@ -277,10 +278,11 @@ export const baycConfig: ProjectConfig = {
         'Fur', 
         'Face', 
         'Ears', 
+        'Eyes',
         'T-shirt',         
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 10,
     },        
     {
       name: 'tiedye_t-shirts_eyes',
@@ -293,7 +295,7 @@ export const baycConfig: ProjectConfig = {
         'T-shirt',       
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 4,
     },    
     {
       name: 'tiedye_t-shirts_mouth',
@@ -302,10 +304,11 @@ export const baycConfig: ProjectConfig = {
         'Fur', 
         'Face', 
         'Ears', 
+        'Eyes',
         'T-shirt',         
         'Ape'
         ],
-      population_size: population_size,
+      population_size: population_size + 100,
     },    
   ],
   anim_outputs: [],
@@ -317,6 +320,6 @@ export const baycConfig: ProjectConfig = {
     collageTwitter1200x675,
     collageTwitter1500x500,  
   ],   
-  re_generate_metadata_cid: false,
+  re_generate_metadata_cid: true,
   excluded_layers_from_metadata: [],
 };

@@ -84,10 +84,12 @@ async function upload_all_asset_artifacts(
   }
   await Promise.all(promises);
   save_assets_state(assets);
-}
+};
+
 function wait(milliseconds: number) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
+};
+
 async function upload_asset_artifacts(
   assets: Asset[],
   cid_checker: CidChecker,
@@ -241,25 +243,31 @@ async function upload_files(paths: string[]) {
       const res = await asyncFn();
       const time = (new Date().getTime() - starttime) / 1000;
       const id_str = id ? `<${id}>` : '';
-      console.log(`\nipfs upload directory Promise${id_str} took ${time} seconds\n`);
+      console.log(`ipfs upload directory Promise ${id_str}`);
+      console.log(`upload ${time} seconds`);
       return res;
     };
-    // const timeout_promise = new Promise((_, reject) => {
-    //   setTimeout(() => {
-    //     reject();
-    //   }, UPLOAD_TIMEOUT);
-    // });
-    // const storage_promise = nft_storage.storeDirectory(files_with_contents);
+  /*
+    const timeout_promise = new Promise((_, reject) => {
+      setTimeout(() => {
+        reject();
+      }, UPLOAD_TIMEOUT);
+    });
+    const storage_promise = nft_storage.storeDirectory(files_with_contents);
+  */
     const result = await track_time(() => nft_storage.storeDirectory(files_with_contents), filenames);
     const cid_string = result as CIDString;
     const status = await nft_storage.status(cid_string);
+    console.log(`nft_storage status => `);
     console.log(status);
     return {
       cid: cid_string,
       success: true,
     };
 
-    //await nft_storage.status(cid); // TODO: test whether necessary.
+  // TODO: test whether necessary.
+  // await nft_storage.status(cid); 
+
   } catch (e) {
     logger.error(`error loading to ipfs: ${JSON.stringify(e)}`);
     return {

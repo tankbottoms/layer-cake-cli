@@ -9,7 +9,6 @@ import { generate_ethereum_metadata } from './eth-metadata';
 
 export async function generate_metadata(asset: Asset) {
   const mos = the_project.config.metadata_outputs;
-
   for (const mo of mos) {
     switch (mo) {
       case 'tezos': {
