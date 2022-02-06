@@ -48,12 +48,12 @@ The Bored Ape Yacht Club Four-twenty Derivative Movement DAO Genesis NFT is a na
 This cornucopia of psychedelic evidence stands as tribute to those encouraged to participate in sheparding the Movement DAO's community, its governance, by sequentially pushing buttons, usually coupled with some meaningful distance traveled by a machine pointing device. 
 `;
 
-const population_size = 250;
+const population_size = 2;
 
 export const baycConfig: ProjectConfig = {
   name: `bayc-20220204`,
   // stunt_populations_to: 50,
-  upload_images_to_ipfs: true,
+  upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
   resume_folder: '', // '20220205-03283885',
@@ -62,6 +62,7 @@ export const baycConfig: ProjectConfig = {
   metadata_file_extension: false,
   hide_rarity_names: true,
   rotated_images_allowed: 0, //random(20),
+  mirror_images_allowed: random(2222),
   // asset_origin: 0,
   metadata_input: {
     name: `BAYC 1420 Movement DAO Community Leader NFTs`,
@@ -130,186 +131,186 @@ export const baycConfig: ProjectConfig = {
         ],
       population_size: population_size,
     },    
-    {
-      name: 'bg_mouth',
-      layer_order: [
-        'Background_Color', 
-        'Background_Pattern', 
-        'T-shirt',  
-        'Fur', 
-        'Ears', 
-        'Face', 
-        'Eyes', 
-        'Ape'
-        ],
-      population_size: population_size,
-    },        
-    {
-      name: 'stolen_t-shirts',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Chest',
-        'Nipples',
-        'Ape',
-        'Medallion'
-        ],
-      population_size: population_size,
-    },    
-    {
-      name: 'stolen_t-shirts_eyes',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Eyes',
-        'Chest',
-        'Nipples',
-        'Ape',
-        'Medallion'        
-        ],
-      population_size: population_size,
-    },    
-    {
-      name: 'stolen_t-shirts_mouth',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Eyes',
-        'Chest',
-        'Nipples',
-        'Ape',
-        'Medallion'        
-        ],
-      population_size: population_size,
-    },
-    {
-      name: 't-shirts',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face', 
-        'Ears', 
-        'T-shirt_Color', 
-        'T-shirt_Pattern', 
-        'Ape'
-        ],
-      population_size: population_size + 250 + 100,
-    },    
-    {
-      name: 't-shirts_eyes',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face', 
-        'Ears', 
-        'Eyes',
-        'T-shirt_Color', 
-        'T-shirt_Pattern', 
-        'Ape'
-        ],
-      population_size: population_size + 100,
-    },    
-    {
-      name: 't-shirts_mouth',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face',
-        'Ears', 
-        'Eyes',        
-        'T-shirt_Color', 
-        'T-shirt_Pattern', 
-        'Ape'
-        ],
-      population_size: population_size + 100,
-    },    
-    {
-      name: 'tiedye_stolen_t-shirts',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Eyes',
-        'Chest',
-        'Nipples',
-        'Ape',        
-        ],
-      population_size: population_size + 10,
-    },    
-    {
-      name: 'tiedye_stolen_t-shirts_eyes',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Eyes',
-        'Chest',
-        'Nipples',
-        'Ape',        
-        ],
-      population_size: population_size + 10,
-    },    
-    {
-      name: 'tiedye_stolen_t-shirts_mouth',
-      layer_order: [
-        'Background',         
-        'Fur', 
-        'Face', 
-        'Ears',
-        'Eyes',
-        'Chest',
-        'Nipples',
-        'Ape',        
-        ],
-      population_size: population_size + 10,
-    },
-    {
-      name: 'tiedye_t-shirts',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face', 
-        'Ears', 
-        'Eyes',
-        'T-shirt',         
-        'Ape'
-        ],
-      population_size: population_size + 10,
-    },        
-    {
-      name: 'tiedye_t-shirts_eyes',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face', 
-        'Ears', 
-        'Eyes',
-        'T-shirt',       
-        'Ape'
-        ],
-      population_size: population_size + 4,
-    },    
-    {
-      name: 'tiedye_t-shirts_mouth',
-      layer_order: [
-        'Background', 
-        'Fur', 
-        'Face', 
-        'Ears', 
-        'Eyes',
-        'T-shirt',         
-        'Ape'
-        ],
-      population_size: population_size + 100,
-    },    
+    // {
+    //   name: 'bg_mouth',
+    //   layer_order: [
+    //     'Background_Color', 
+    //     'Background_Pattern', 
+    //     'T-shirt',  
+    //     'Fur', 
+    //     'Ears', 
+    //     'Face', 
+    //     'Eyes', 
+    //     'Ape'
+    //     ],
+    //   population_size: population_size,
+    // },        
+    // {
+    //   name: 'stolen_t-shirts',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',
+    //     'Medallion'
+    //     ],
+    //   population_size: population_size,
+    // },    
+    // {
+    //   name: 'stolen_t-shirts_eyes',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Eyes',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',
+    //     'Medallion'        
+    //     ],
+    //   population_size: population_size,
+    // },    
+    // {
+    //   name: 'stolen_t-shirts_mouth',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Eyes',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',
+    //     'Medallion'        
+    //     ],
+    //   population_size: population_size,
+    // },
+    // {
+    //   name: 't-shirts',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears', 
+    //     'T-shirt_Color', 
+    //     'T-shirt_Pattern', 
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 250 + 100,
+    // },    
+    // {
+    //   name: 't-shirts_eyes',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears', 
+    //     'Eyes',
+    //     'T-shirt_Color', 
+    //     'T-shirt_Pattern', 
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 100,
+    // },    
+    // {
+    //   name: 't-shirts_mouth',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face',
+    //     'Ears', 
+    //     'Eyes',        
+    //     'T-shirt_Color', 
+    //     'T-shirt_Pattern', 
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 100,
+    // },    
+    // {
+    //   name: 'tiedye_stolen_t-shirts',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Eyes',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',        
+    //     ],
+    //   population_size: population_size + 10,
+    // },    
+    // {
+    //   name: 'tiedye_stolen_t-shirts_eyes',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Eyes',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',        
+    //     ],
+    //   population_size: population_size + 10,
+    // },    
+    // {
+    //   name: 'tiedye_stolen_t-shirts_mouth',
+    //   layer_order: [
+    //     'Background',         
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears',
+    //     'Eyes',
+    //     'Chest',
+    //     'Nipples',
+    //     'Ape',        
+    //     ],
+    //   population_size: population_size + 10,
+    // },
+    // {
+    //   name: 'tiedye_t-shirts',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears', 
+    //     'Eyes',
+    //     'T-shirt',         
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 10,
+    // },        
+    // {
+    //   name: 'tiedye_t-shirts_eyes',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears', 
+    //     'Eyes',
+    //     'T-shirt',       
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 4,
+    // },    
+    // {
+    //   name: 'tiedye_t-shirts_mouth',
+    //   layer_order: [
+    //     'Background', 
+    //     'Fur', 
+    //     'Face', 
+    //     'Ears', 
+    //     'Eyes',
+    //     'T-shirt',         
+    //     'Ape'
+    //     ],
+    //   population_size: population_size + 100,
+    // },    
   ],
   anim_outputs: [],
   collage_outputs: [    

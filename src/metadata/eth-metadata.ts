@@ -42,7 +42,7 @@ export function generate_ethereum_metadata(asset: Asset) {
       if (!!boost) {
         asset_boosts.push(boost);
       }
-      traits.push({trait_type: trait.trait_type, value: stripped_value, display_type: 'string' })
+      traits.push({trait_type: trait.trait_type, value: stripped_value })
       tags.push(stripped_value);
     });
 
