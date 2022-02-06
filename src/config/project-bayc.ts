@@ -103,6 +103,22 @@ export const baycConfig: ProjectConfig = {
   ],  
   populations: [                        
     {
+      name: 'mp_ape',
+      layer_order: [
+        'Background',         
+        'Shadow',
+        'Fur', 
+        'Face', 
+        'Ears',
+        'Chest',
+        'Nipples',
+        'Ape',
+        'Medallion',
+        'Accessory'
+        ],
+      population_size: 1,
+    },        
+    {
       name: 'bg',
       layer_order: [
         'Background_Color', 
