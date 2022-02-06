@@ -68,7 +68,7 @@ async function generate_static_images(asset: Asset) {
             rotation = 270;
           }
           const temp_path = `${original_folder}/${asset.base_name}-rotated.png`;
-          await sharp(original_path).rotate(rotation).png({quality:90}).toFile(temp_path);
+          await sharp(original_path).flop(true).png({quality:90}).toFile(temp_path);
           fs.rmSync(original_path);
           fs.renameSync(temp_path, original_path);
           the_project.rotated_assets_allowed--;
@@ -85,6 +85,7 @@ async function generate_static_images(asset: Asset) {
         await sharp(original_path)
           .resize(output.width, output.height)
           .sharpen()
+          .flop(true)
           .withMetadata()
           .png({ quality: 90 })
           .toFile(path);

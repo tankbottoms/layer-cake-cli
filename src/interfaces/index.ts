@@ -79,6 +79,7 @@ export interface ProjectConfig {
   stunt_populations_to?: number;
   hide_rarity_names?: boolean;
   rotated_images_allowed: number;
+  mirror_images_allowed?: number;
   shuffle_assets: boolean;
   excluded_layers_from_metadata: string[];
   re_generate_metadata_cid: boolean;
