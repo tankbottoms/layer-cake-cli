@@ -125,7 +125,7 @@ async function generate_dynamic_images(asset: Asset) {
     }
     await animate_all_frames(asset, output);
     await combine_video(asset, output);
-    await delay(1000); // TODO: fix
+    await delay(1000); // TODO: remove
     delete_animation_files(asset, output);
     logger.warn(`video gen took ${getElapsed(timer) / 1000} sec(s)`);
   }

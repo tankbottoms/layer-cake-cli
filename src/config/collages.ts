@@ -1,5 +1,7 @@
 import { CollageOutput } from '../interfaces'
 
+const skip_mostly_empty = false;
+
 export const collage20000: CollageOutput = {
   tag: 'contact-sheet-20000',
   source_image_type: 'icon',
@@ -8,7 +10,7 @@ export const collage20000: CollageOutput = {
   tile_width: 100,
   tile_height: 100,
   max_sheets: 5,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
 
@@ -20,7 +22,7 @@ export const collage10000: CollageOutput = {
   tile_width: 100,
   tile_height: 100,
   max_sheets: 5,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
   
@@ -32,7 +34,7 @@ export const collage4444: CollageOutput = {
   tile_width: 200,
   tile_height: 200,
   max_sheets: 5,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
 
@@ -44,7 +46,7 @@ export const collage1600: CollageOutput = {
   tile_width: 250,
   tile_height: 250,
   max_sheets: 5,
-  skip_mostly_empty: false,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
 
@@ -56,7 +58,7 @@ export const collage4000: CollageOutput = {
   tile_width: 200,
   tile_height: 200,
   max_sheets: 5,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
   
@@ -68,7 +70,7 @@ export const collage5000: CollageOutput = {
   tile_width: 200,
   tile_height: 200,
   max_sheets: 10,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
 };
 
@@ -80,9 +82,21 @@ export const collage11110: CollageOutput = {
   tile_width: 100,
   tile_height: 100,
   max_sheets: 5,
-  skip_mostly_empty: true,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: false,
-}
+};
+
+export const collageOpenSea1200x75: CollageOutput = {
+  tag: 'collage-opensea-1200-75',
+  source_image_type: 'icon',
+  columns: 5,
+  rows: 3,
+  tile_width: 200,
+  tile_height: 200,
+  max_sheets: 30,
+  skip_mostly_empty: skip_mostly_empty,
+  shuffle: true,
+};
 
 export const collageTwitter1200x675: CollageOutput = {
   tag: 'collage-twitter-1200-675',
@@ -92,7 +106,7 @@ export const collageTwitter1200x675: CollageOutput = {
   tile_width: 225,
   tile_height: 225,
   max_sheets: 30,
-  skip_mostly_empty: false,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: true,
 };
 
@@ -104,7 +118,7 @@ export  const collageDiscord600x240: CollageOutput = {
   tile_width: 137,
   tile_height: 137,
   max_sheets: 30,
-  skip_mostly_empty: false,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: true,
 };
 
@@ -116,6 +130,6 @@ export const collageTwitter1500x500: CollageOutput = {
   tile_width: 250,
   tile_height: 250,
   max_sheets: 30,
-  skip_mostly_empty: false,
+  skip_mostly_empty: skip_mostly_empty,
   shuffle: true,
 };

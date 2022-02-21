@@ -12,7 +12,7 @@ import {
   collageTwitter1500x500,
   collage10000,
 } from './collages';
-import { baycConfig } from './project-bayc';
+import { bannyConfig } from './project-banny';
 
 const iso_datetime_now = new Date().toISOString();
 
@@ -571,4 +571,4 @@ const testConfig: ProjectConfig = {
   excluded_layers_from_metadata: [],
 };
 
-export const project_config: ProjectConfig[] = [meowConfig, gloConfig, testConfig, globabyConfig, baycConfig];
+export const project_config: ProjectConfig[] = [meowConfig, gloConfig, testConfig, globabyConfig, bannyConfig];

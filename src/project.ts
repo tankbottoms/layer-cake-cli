@@ -10,7 +10,7 @@ const enum projects {
   'glo-gang',
   'test',
   'glo-baby',
-  'bayc',
+  'banny',
 };
 
 const current_project = project_config[4];
