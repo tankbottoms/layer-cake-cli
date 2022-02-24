@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import moment from 'moment';
 import { CollageOutput, ProjectConfig } from '../interfaces';
 import { MEOWSDAO_GNOSIS_SAFE } from './index';
@@ -76,7 +77,7 @@ const meowConfig: ProjectConfig = {
     creators: [`Natasha Pankina, n@meowsdao.xyz`],
     publishers: [`@atsignhandle`],
     genres: [`meow`, `character`, `profile`],
-    tags: [`ETH`],
+    tags: [`XTZ`],
     drop_date: `${iso_datetime_now}`,
     native_size: '2084x2084',
     more_info_link: 'https://meowsdao.xyz',

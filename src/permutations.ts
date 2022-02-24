@@ -178,7 +178,7 @@ export function sample_permutations_from_many_with_priority(arrays: Array<Array<
     }
     if (results.length >= max) return results;
   }
-}
+};
 /* 
   randomly select members from the input set, 
   hashing to make sure we only emit novel combinations.
@@ -223,7 +223,7 @@ export function sample_permutations_from_many_with_new_optimization(arrays: Arra
     }
     if (results.length >= max) return results;
   }
-}
+};
 
 export function sample_permutations_from_many(arrays: Array<Array<Trait>>, max: number): any[][] {
   let total_permutations = 1;
@@ -276,7 +276,7 @@ export function sample_permutations_from_many(arrays: Array<Array<Trait>>, max: 
     }
     if (results.length >= max) return results;
   }
-}
+};
 
 function write_combinations_to_std_out(combinations: any[][]) {
   const write = (s: string) => {
@@ -292,11 +292,10 @@ function write_combinations_to_std_out(combinations: any[][]) {
     }
     write(`\n`);
   });
-}
+};
 
 export async function get_permutations(n: number, universe: number, traits_arrays: any[][]) {
   let combinations: any[][];
-
   combinations = sample_permutations_from_many_with_new_optimization(traits_arrays, n);
   false && logger.debug(combinations);
   false && write_combinations_to_std_out(combinations);
@@ -308,4 +307,4 @@ export async function get_permutations(n: number, universe: number, traits_array
     }`,
   );
   return combinations;
-}
+};
