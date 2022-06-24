@@ -10,6 +10,8 @@
 	let currentCharacter: { [k: string]: string } = {};
 	let done = false;
 
+	// TODO: clean up this mess
+
 	// function handleIncompatibleAsset(category: string, asset: string) {
 	// 	const incompatibleAssets = $allIncompatibleAssets as any;
 	// 	let layers = incompatibleAssets[$page.params.banny];
@@ -56,10 +58,7 @@
 		// }
 
 		done = true;
-		console.log(currentCharacter);
 	});
-
-	$: console.log(currentCharacter);
 </script>
 
 <section>
@@ -121,6 +120,8 @@
 	section {
 		margin: 0 auto;
 		padding: 20px;
+		/* The 250px are form the drawer */
+		max-width: calc(100vw - 250px);
 	}
 
 	.incompatible {
