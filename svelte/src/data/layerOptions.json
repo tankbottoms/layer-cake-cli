@@ -30,9 +30,9 @@
     "Tropical_fish_white"
   ],
   "Brows": [
+    "Usual",
     "Pensive",
-    "Raised",
-    "Usual"
+    "Raised"
   ],
   "Ears": [
     "Grey",
@@ -59,6 +59,7 @@
     "White_red_stripes"
   ],
   "Glasses": [
+    "Nothing",
     "Black",
     "Black_cateye",
     "Monocle",
@@ -67,6 +68,7 @@
     "Round"
   ],
   "Headwear": [
+    "Nothing",
     "Astronaut",
     "Batman",
     "Burger",
@@ -89,6 +91,7 @@
     "Yellow_party_favor"
   ],
   "Pattern": [
+    "Nothing",
     "Chicken",
     "Coral",
     "Diamonds",

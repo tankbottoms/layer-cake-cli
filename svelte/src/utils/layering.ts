@@ -4,12 +4,27 @@ const asBase64 = true;
 
 type Layers = { [trait: string]: string };
 
+export const layerOrdering = [
+	'Background',
+	'Fur',
+	'Ears',
+	'Brows',
+	'Eyes',
+	'Glasses',
+	'Headwear',
+	'Nose',
+	'T-shirt',
+	'Pattern',
+	'Signature'
+];
+
 // TODO: return the SVG and not base64 data
 export async function getLayeredSvg({ layers }: { layers: Layers }) {
 	let svgImageString = '';
 	let svgs: string[] = [];
-	for (const [key, value] of Object.entries(layers)) {
-		if (!value) continue;
+	for (const key of layerOrdering) {
+    const value = layers[key];
+		if (!value || value === "Nothing") continue;
 		const src = `${baseUrl}/layers/${key}/${value}.svg`;
 		const response = await fetch(src);
 
