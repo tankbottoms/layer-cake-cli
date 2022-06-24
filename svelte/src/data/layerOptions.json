@@ -1,0 +1,114 @@
+{
+  "Background": [
+    "Ethereum_white",
+    "Milkbox_blue_green",
+    "Milkbox_blue_violet",
+    "Milkbox_orange",
+    "Milkbox_pink",
+    "Milkbox_white",
+    "Palms_blue_green",
+    "Palms_blue_violet",
+    "Palms_pink_green",
+    "Palms_white",
+    "Paws_blue_green",
+    "Paws_blue_violet",
+    "Paws_orange",
+    "Paws_pink",
+    "Paws_white",
+    "Pizza_blue_green",
+    "Pizza_pink",
+    "Pizza_white",
+    "Rainbow_blue_green",
+    "Rainbow_blue_violet",
+    "Rainbow_pink",
+    "Rainbow_white",
+    "Tropical_fish_blue_green",
+    "Tropical_fish_blue_violet",
+    "Tropical_fish_orange",
+    "Tropical_fish_pink",
+    "Tropical_fish_pink_green",
+    "Tropical_fish_white"
+  ],
+  "Brows": [
+    "Pensive",
+    "Raised",
+    "Usual"
+  ],
+  "Ears": [
+    "Grey",
+    "Pink"
+  ],
+  "Eyes": [
+    "Blue_crying",
+    "Green_crying",
+    "Hazel_crying",
+    "Heterochromia",
+    "Heterochromia_left",
+    "Heterochromia_left_big",
+    "Heterochromia_right_up"
+  ],
+  "Fur": [
+    "Black_grey_mouth",
+    "Black_pink_stripes",
+    "Black_tuxedo",
+    "Ginger_tuxedo",
+    "Ginger_white_stripes",
+    "White_black_spotted",
+    "White_ginger_spotted",
+    "White_green_stripes",
+    "White_red_stripes"
+  ],
+  "Glasses": [
+    "Black",
+    "Black_cateye",
+    "Monocle",
+    "Orange",
+    "Orange_cateye_r5",
+    "Round"
+  ],
+  "Headwear": [
+    "Astronaut",
+    "Batman",
+    "Burger",
+    "Dino",
+    "Flyagaric",
+    "Panda",
+    "Pineapple",
+    "Tiger"
+  ],
+  "Nose": [
+    "Beaming",
+    "Bubblegum",
+    "Cheshire_smile",
+    "Drooling",
+    "Grinning",
+    "Laughing",
+    "Licking",
+    "Rose",
+    "Surprised",
+    "Yellow_party_favor"
+  ],
+  "Pattern": [
+    "Chicken",
+    "Coral",
+    "Diamonds",
+    "Dog",
+    "Ethereum",
+    "Fish",
+    "Paws",
+    "Preppy_bear",
+    "Tropics"
+  ],
+  "Signature": [
+    "Natasha_Pankina-01",
+    "Natasha_Pankina.png"
+  ],
+  "T-shirt": [
+    "Bright_blue",
+    "Magenta",
+    "Neon_green",
+    "Pink",
+    "White",
+    "Yellow"
+  ]
+}
