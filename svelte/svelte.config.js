@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import path from 'path';
 
@@ -10,10 +10,12 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			default: true
+		},
 		vite: {
 			resolve: {
 				alias: {
-					$lib: path.resolve('./src/lib'),
 					$data: path.resolve('./src/data'),
 					$stores: path.resolve('./src/stores'),
 					$utils: path.resolve('./src/utils'),
