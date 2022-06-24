@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	// import CollapsibleModal from '$lib/CollapsibleModal.svelte';
+	import CollapsibleModal from '$lib/CollapsibleModal.svelte';
 	// import { allIncompatibleAssets } from '../../store';
 	import { layerOrdering, getLayeredSvg } from '$utils/layering';
 	import layerOptions from '$data/layerOptions.json';
@@ -104,9 +104,8 @@
 			{/await}
 		{/each}
 	{/each}
+	<CollapsibleModal bind:currentCharacter />
 </section>
-
-<!-- <CollapsibleModal assets={$allIncompatibleAssets} /> -->
 
 <!-- 						class:incompatible={$allIncompatibleAssets[$page.params.banny]?.[category]?.includes(
 							layer
