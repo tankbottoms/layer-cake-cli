@@ -4,12 +4,8 @@
 	// export let assets: any = {};
 	export let currentCharacter;
 
-	console.log(currentCharacter);
-
 	let open = true;
 	let showCopied = false;
-
-	console.log('collapse');
 
 	function copy() {
 		navigator.clipboard.writeText(JSON.stringify(currentCharacter, undefined, 2));
@@ -22,16 +18,19 @@
 </script>
 
 <div class:close={!open} id="drawer">
-	<!-- <svg
-		on:click={() => {
+	<button
+		class="hidden"
+		on:click|stopPropagation={() => {
 			open = !open;
 		}}
 	>
-		<circle cx="20px" cy="20px" r="20px" />
-	</svg> -->
+		<svg height="40" width="40">
+			<circle cx="20px" cy="20px" r="20px" />
+		</svg>
+	</button>
 	<h2>Current Character</h2>
 	<!-- <p>✅ <i>Click on asset to add or remove from list.</i></p> -->
-	<p>👁 <i>Click on this modal to collapse it to the side.</i></p>
+	<p>👁 <i>Click on the half-circle to collapse it to the side.</i></p>
 	{#each Object.keys(layerOptions) as layer}
 		<div>
 			<h4>{layer}</h4>
@@ -95,5 +94,15 @@
 
 	.close svg {
 		fill: gold;
+	}
+
+	button.hidden {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
 	}
 </style>
